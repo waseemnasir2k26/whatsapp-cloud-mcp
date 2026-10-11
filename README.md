@@ -14,14 +14,22 @@ It is **ToS-safe for businesses by construction**: official Graph API only, neve
 ## 60-second quickstart
 
 1. In Meta's developer dashboard create an app with the WhatsApp product. Note your **phone number ID**, **WABA ID**, **app secret**, and a permanent **system-user token**.
-2. Add the server to Claude Desktop (see [`claude_desktop_config.example.json`](claude_desktop_config.example.json)):
+2. Clone and build (not on npm yet):
+
+```bash
+git clone https://github.com/waseemnasir2k26/whatsapp-cloud-mcp.git
+cd whatsapp-cloud-mcp
+npm ci && npm run build
+```
+
+3. Add the server to Claude Desktop (see [`claude_desktop_config.example.json`](claude_desktop_config.example.json)):
 
 ```json
 {
   "mcpServers": {
     "whatsapp": {
-      "command": "npx",
-      "args": ["-y", "whatsapp-cloud-mcp"],
+      "command": "node",
+      "args": ["/absolute/path/to/whatsapp-cloud-mcp/dist/server.js"],
       "env": {
         "WHATSAPP_TOKEN": "<token>",
         "WHATSAPP_PHONE_NUMBER_ID": "<phone number id>",
@@ -34,10 +42,10 @@ It is **ToS-safe for businesses by construction**: official Graph API only, neve
 }
 ```
 
-3. Ask Claude: _"Lint this template for me"_ (works with no credentials at all), then _"record opt-in for +62..., then send the order_shipped template"_.
-4. `DRY_RUN` is **on by default**: every send returns the exact payload it _would_ send. Set `DRY_RUN=false` only when you are ready to go live.
+4. Ask Claude: _"Lint this template for me"_ (works with no credentials at all), then _"record opt-in for +62..., then send the order_shipped template"_.
+5. `DRY_RUN` is **on by default**: every send returns the exact payload it _would_ send. Set `DRY_RUN=false` only when you are ready to go live.
 
-> `npx whatsapp-cloud-mcp` works once the package is published to npm. Until then: `git clone`, `npm ci && npm run build`, and point `command` at `node` with `args` `["/path/to/whatsapp-cloud-mcp/dist/server.js"]`.
+> **Do not run `npx whatsapp-cloud-mcp`.** The unscoped npm name `whatsapp-cloud-mcp` belongs to an unrelated third-party package; running it would hand your Meta token to code that is not this project. Install from this repository as shown above.
 
 ## Tools (10)
 

@@ -1,8 +1,8 @@
 {
   "mcpServers": {
     "whatsapp": {
-      "command": "npx",
-      "args": ["-y", "whatsapp-cloud-mcp"],
+      "command": "node",
+      "args": ["/absolute/path/to/whatsapp-cloud-mcp/dist/server.js"],
       "env": {
         "WHATSAPP_TOKEN": "<permanent system-user access token>",
         "WHATSAPP_PHONE_NUMBER_ID": "<phone number id>",

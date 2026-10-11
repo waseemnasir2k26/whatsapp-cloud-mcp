@@ -1,11 +1,12 @@
 // Minimal Express receiver for Meta's WhatsApp webhooks.
-//   npm i express whatsapp-cloud-mcp && npm i -D @types/express tsx
+//   From a clone of this repo: npm ci && npm i express && npm i -D @types/express
 //   WHATSAPP_APP_SECRET=... WHATSAPP_VERIFY_TOKEN=... npx tsx examples/express-webhook.ts
+//   (Do not `npm i whatsapp-cloud-mcp`: that npm name belongs to an unrelated third-party package.)
 //
 // Not part of the npm build (excluded from tsc) and not exercised by CI; the verification
 // primitive it uses (verifySignature) is covered by tests/hmac.test.ts.
 import express from "express";
-import { verifySignature } from "whatsapp-cloud-mcp";
+import { verifySignature } from "../src/index.js";
 
 const app = express();
 const SECRET = process.env.WHATSAPP_APP_SECRET ?? "";
