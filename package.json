@@ -1,0 +1,56 @@
+{
+  "name": "whatsapp-cloud-mcp",
+  "version": "1.0.0",
+  "description": "Compliant MCP server for the official WhatsApp Business Cloud API: send templates, 24h-window and opt-in guards, template linter, webhook HMAC verify.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "whatsapp-cloud-mcp": "dist/server.js"
+  },
+  "files": [
+    "dist",
+    "examples",
+    "claude_desktop_config.example.json",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "demo": "tsx scripts/demo.ts",
+    "start": "node dist/server.js",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "whatsapp",
+    "whatsapp-business",
+    "whatsapp-cloud-api",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "claude",
+    "n8n",
+    "compliance"
+  ],
+  "author": "Waseem Nasir <waseemhome8@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waseemnasir2k26/whatsapp-cloud-mcp.git"
+  },
+  "homepage": "https://github.com/waseemnasir2k26/whatsapp-cloud-mcp#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^4.6.6"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}

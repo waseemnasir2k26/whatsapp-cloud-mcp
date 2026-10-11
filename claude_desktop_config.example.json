@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "whatsapp": {
+      "command": "npx",
+      "args": ["-y", "whatsapp-cloud-mcp"],
+      "env": {
+        "WHATSAPP_TOKEN": "<permanent system-user access token>",
+        "WHATSAPP_PHONE_NUMBER_ID": "<phone number id>",
+        "WHATSAPP_WABA_ID": "<whatsapp business account id>",
+        "WHATSAPP_APP_SECRET": "<meta app secret, used to verify webhooks>",
+        "DRY_RUN": "true",
+        "DAILY_SEND_CAP": "200",
+        "MINUTE_RATE_CAP": "20"
+      }
+    }
+  }
+}
