@@ -180,15 +180,10 @@ What is **not** tested: real calls to Meta (no credentials in CI). The request s
 - [mcp-spend-guard](https://github.com/waseemnasir2k26/mcp-spend-guard): wrap any MCP server with spend caps and a kill switch
 - [fiverr-gig-optimizer](https://github.com/waseemnasir2k26/fiverr-gig-optimizer): free offline Fiverr gig scorer
 
-## Work with SkynetLabs
+---
 
-Built by [Waseem Nasir](https://www.skynetjoe.com/?utm_source=github&utm_medium=readme&utm_campaign=whatsapp-cloud-mcp) at SkynetLabs — n8n + AI automation for small businesses.
-
-We wire Claude/n8n agents into your WhatsApp Business number safely.
-
-- Hire on Fiverr: https://www.fiverr.com/agencies/skynetjoellc
-- Hire on Upwork: https://www.upwork.com/freelancers/muhammadwaseemnasir
-- Book a free call: https://calendly.com/skynetlabs/schedule-a-free-consultation
+Need this wired into your business? SkynetLabs builds voice agents, n8n back offices and sites that convert → https://skynetjoe.com
+Contact: info@skynetjoe.com
 
 ## License
 
